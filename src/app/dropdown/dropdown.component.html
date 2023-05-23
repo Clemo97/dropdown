@@ -1,0 +1,12 @@
+<div>
+  <label for="dropdown">Select a name:</label>
+  <select id="dropdown" [(ngModel)]="selectedName" (change)="onDropdownChange()">
+    <option *ngFor="let item of data" [value]="item.id">{{ item.name }}</option>
+  </select>
+</div>
+
+<div *ngIf="selectedName">
+  <h2>Selected Data:</h2>
+  <p>ID: {{ selectedData?.id }}</p>
+  <p>Name: {{ selectedData?.name }}</p>
+</div>
