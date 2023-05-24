@@ -1,12 +1,15 @@
 <div>
-  <label for="dropdown">Select a name:</label>
-  <select id="dropdown" [(ngModel)]="selectedName" (change)="onDropdownChange()">
-    <option *ngFor="let item of data" [value]="item.id">{{ item.name }}</option>
-  </select>
+  <label for="heroInput">Select a hero:</label>
+  <input type="text" id="heroInput" [formControl]="heroControl" [matAutocomplete]="auto">
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let hero of filteredHeroes" [value]="hero.name">
+      {{ hero.name }}
+    </mat-option>
+  </mat-autocomplete>
 </div>
 
-<div *ngIf="selectedName">
-  <h2>Selected Data:</h2>
-  <p>ID: {{ selectedData?.id }}</p>
-  <p>Name: {{ selectedData?.name }}</p>
+<div *ngIf="selectedHero">
+  <h2>Selected Hero:</h2>
+  <p>ID: {{ selectedHero.id }}</p>
+  <p>Name: {{ selectedHero.name }}</p>
 </div>
