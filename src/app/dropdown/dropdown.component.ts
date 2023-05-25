@@ -10,6 +10,7 @@ import { HEROES } from '../mock-heroes';
   styleUrls: ['./dropdown.component.css']
 })
 export class DropDownComponent implements OnInit {
+  
   heroControl = new FormControl();
   heroes: Hero[] = HEROES;
   filteredHeroes: Hero[] = [];
