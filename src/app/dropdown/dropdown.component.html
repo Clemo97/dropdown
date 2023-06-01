@@ -2,7 +2,10 @@
     <h1>Angular App</h1>
 <mat-form-field>
   <mat-label>Select a hero:</mat-label>
-  <input type="text" matInput [formControl]="heroControl" [matAutocomplete]="auto">
+  <input type="text"
+        matInput
+        [formControl]="heroControl"
+        [matAutocomplete]="auto">
   <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onHeroSelection($event.option.value)">
     <mat-option *ngFor="let hero of filteredHeroes" [value]="hero.name">
       {{ hero.name }}
