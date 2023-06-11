@@ -1,37 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { County } from '../mock-elections';
+import { Observable } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
-import { Hero } from '../hero';
-import { HEROES } from '../mock-heroes';
 
 @Component({
   selector: 'app-dropdown',
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.css']
 })
-export class DropDownComponent implements OnInit {
-  
-  heroControl = new FormControl();
-  heroes: Hero[] = HEROES;
-  filteredHeroes: Hero[] = [];
-  selectedHero: Hero | undefined;
+export class DropdownComponent implements OnInit {
+  countyControl = new FormControl();
+  counties: County[] = COUNTIES;
+  filteredCounties!: Observable<County[]>;
+  selectedCounty: County | undefined;
 
   ngOnInit() {
-    this.filteredHeroes = this.heroes;
-    this.heroControl.valueChanges.pipe(
+    this.filteredCounties = this.countyControl.valueChanges.pipe(
       startWith(''),
-      map(value => this.filterHeroes(value))
-    ).subscribe(filtered => {
-      this.filteredHeroes = filtered;
-    });
+      map(value => this.filterCounties(value))
+    );
   }
 
-  filterHeroes(value: string): Hero[] {
+  filterCounties(value: string): County[] {
     const filterValue = value.toLowerCase();
-    return this.heroes.filter(hero => hero.name.toLowerCase().includes(filterValue));
+    return this.counties.filter(county => county.name.toLowerCase().includes(filterValue));
   }
 
-  onHeroSelection(heroName: string) {
-    this.selectedHero = this.heroes.find(hero => hero.name === heroName);
+  onCountySelection(countyName: string) {
+    this.selectedCounty = this.counties.find(county => county.name === countyName);
   }
 }
