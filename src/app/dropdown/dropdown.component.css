@@ -1,11 +1,17 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100vh;
+  /* Adjust this value as needed */
 }
 
-.selected-hero {
-  margin-top: 16px;
+h3,
+h4,
+ul {
+  text-align: center;
+}
+h3 {
+  color: red;
 }

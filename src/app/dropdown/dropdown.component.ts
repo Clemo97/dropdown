@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { County } from '../mock-elections';
+import { County, ELECTIONS } from '../mock-elections';
 import { Observable } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
 
@@ -11,7 +11,7 @@ import { startWith, map } from 'rxjs/operators';
 })
 export class DropdownComponent implements OnInit {
   countyControl = new FormControl();
-  counties: County[] = COUNTIES;
+  counties: County[] = ELECTIONS;
   filteredCounties!: Observable<County[]>;
   selectedCounty: County | undefined;
 

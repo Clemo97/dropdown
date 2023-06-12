@@ -1,3 +1,4 @@
+<div class="container">
 <div>
   <mat-form-field>
     <input type="text" placeholder="Select a county" matInput [formControl]="countyControl" [matAutocomplete]="auto">
@@ -12,28 +13,29 @@
 
 <div *ngIf="selectedCounty">
   <h3>Results for {{ selectedCounty.name }}</h3>
-  <h4>President</h4>
+  <h4><b>President</b></h4>
   <ul>
     <li *ngFor="let result of selectedCounty.president">
       {{ result.candidate }} ({{ result.party }}): {{ result.votes }} votes
     </li>
   </ul>
-  <h4>Governor</h4>
+  <h4><b>Governor</b></h4>
   <ul>
     <li *ngFor="let result of selectedCounty.governor">
       {{ result.candidate }} ({{ result.party }}): {{ result.votes }} votes
     </li>
   </ul>
-  <h4>Senate</h4>
+  <h4><b>Senate</b></h4>
   <ul>
     <li *ngFor="let result of selectedCounty.senate">
       {{ result.candidate }} ({{ result.party }}): {{ result.votes }} votes
     </li>
   </ul>
-  <h4>Women Representative</h4>
+  <h4><b>Women Representative</b></h4>
   <ul>
     <li *ngFor="let result of selectedCounty.womenRepresentative">
       {{ result.candidate }} ({{ result.party }}): {{ result.votes }} votes
     </li>
   </ul>
+</div>
 </div>
