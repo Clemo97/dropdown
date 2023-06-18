@@ -29,5 +29,7 @@ export class DropdownComponent implements OnInit {
 
   onCountySelection(countyName: string) {
     this.selectedCounty = this.counties.find(county => county.name === countyName);
+    this.countyControl.setValue(''); // Clear the input form
   }
+
 }
