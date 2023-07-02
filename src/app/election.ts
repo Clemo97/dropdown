@@ -10,4 +10,6 @@ export interface ElectionResult {
   candidate: string;
   party: string;
   votes: number;
+  percentage?: number;
+  color?: string;
 }

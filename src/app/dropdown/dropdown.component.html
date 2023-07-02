@@ -3,41 +3,65 @@
     <h3>Results for {{ selectedCounty.name }} County</h3>
     </div>
 <div>
-  <mat-form-field>
-    <input type="text" placeholder="Select a county" matInput [formControl]="countyControl" [matAutocomplete]="auto">
-    <mat-autocomplete #auto="matAutocomplete">
-      <mat-option *ngFor="let county of filteredCounties | async" [value]="county.name"
-        (onSelectionChange)="onCountySelection(county.name)">
-        {{ county.name }}
-      </mat-option>
-    </mat-autocomplete>
-  </mat-form-field>
-</div>
 
-<div *ngIf="selectedCounty">
-  <h4><b>President</b></h4>
-  <ul>
-    <li *ngFor="let result of selectedCounty.president">
-      {{ result.candidate }} ({{ result.party }}): {{ result.votes }} votes
-    </li>
-  </ul>
-  <h4><b>Governor</b></h4>
-  <ul>
-    <li *ngFor="let result of selectedCounty.governor">
-      {{ result.candidate }} ({{ result.party }}): {{ result.votes }} votes
-    </li>
-  </ul>
-  <h4><b>Senate</b></h4>
-  <ul>
-    <li *ngFor="let result of selectedCounty.senate">
-      {{ result.candidate }} ({{ result.party }}): {{ result.votes }} votes
-    </li>
-  </ul>
-  <h4><b>Women Representative</b></h4>
-  <ul>
-    <li *ngFor="let result of selectedCounty.womenRepresentative">
-      {{ result.candidate }} ({{ result.party }}): {{ result.votes }} votes
-    </li>
-  </ul>
-</div>
-</div>
+<div class="container">
+  <div *ngIf="selectedCounty">
+    <h3>Results for {{ selectedCounty.name }} County</h3>
+  </div>
+
+  <div>
+    <mat-form-field>
+      <input type="text" placeholder="Select a county" matInput [formControl]="countyControl" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let county of filteredCounties | async" [value]="county.name"
+          (onSelectionChange)="onCountySelection(county.name)">
+          {{ county.name }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </div>
+
+  <div *ngIf="selectedCounty">
+    <h4><b>President</b></h4>
+    <table mat-table [dataSource]="selectedCounty.president" class="mat-elevation-z8">
+      <ng-container matColumnDef="candidate">
+        <th mat-header-cell *matHeaderCellDef>Candidate</th>
+        <td mat-cell *matCellDef="let result">{{ result.candidate }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="party">
+        <th mat-header-cell *matHeaderCellDef>Party</th>
+        <td mat-cell *matCellDef="let result">{{ result.party }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="votes">
+        <th mat-header-cell *matHeaderCellDef>Votes</th>
+        <td mat-cell *matCellDef="let result">{{ result.votes }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="['candidate', 'party', 'votes']"></tr>
+      <tr mat-row *matRowDef="let result; columns: ['candidate', 'party', 'votes']"></tr>
+    </table>
+
+    <h4><b>Governor</b></h4>
+    <table mat-table [dataSource]="selectedCounty.governor" class="mat-elevation-z8">
+      <ng-container matColumnDef="candidate">
+        <th mat-header-cell *matHeaderCellDef>Candidate</th>
+        <td mat-cell *matCellDef="let result">{{ result.candidate }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="party">
+        <th mat-header-cell *matHeaderCellDef>Party</th>
+        <td mat-cell *matCellDef="let result">{{ result.party }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="votes">
+        <th mat-header-cell *matHeaderCellDef>Votes</th>
+        <td mat-cell *matCellDef="let result">{{ result.votes }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="['candidate', 'party', 'votes']"></tr>
+      <tr mat-row *matRowDef="let result; columns: ['candidate', 'party', 'votes']"></tr>
+    </table>
+  </div>
+

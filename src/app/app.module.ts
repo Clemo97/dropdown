@@ -7,6 +7,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatTableModule } from '@angular/material/table';
 
 
 
@@ -21,7 +23,9 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatProgressBarModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

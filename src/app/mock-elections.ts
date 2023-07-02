@@ -4,7 +4,7 @@ export const ELECTIONS: County[] = [
   {
     name: 'Uasin Gishu',
     president: [
-      { candidate: 'Candidate 1', party: 'UDA', votes: 10000 },
+      { candidate: 'Candidate 1', party: 'UDA', votes: 87000 },
       { candidate: 'Candidate 2', party: 'ODM', votes: 8000 },
       { candidate: 'Candidate 3', party: 'INDEPENDENT', votes: 6000 },
       { candidate: 'Candidate 4', party: 'Party D', votes: 4000 },
@@ -31,7 +31,7 @@ export const ELECTIONS: County[] = [
   {
     name: 'Trans Nzoia',
     president: [
-      { candidate: 'Candidate 1', party: 'UDA', votes: 13400 },
+      { candidate: 'Candidate 1', party: 'UDA', votes: 54900 },
       { candidate: 'Candidate 2', party: 'ODM', votes: 54000 },
       { candidate: 'Candidate 3', party: 'INDEPENDENT', votes: 16450 },
       { candidate: 'Candidate 4', party: 'Party D', votes: 2340 },
@@ -58,7 +58,7 @@ export const ELECTIONS: County[] = [
   {
     name: 'Nairobi',
     president: [
-      { candidate: 'Candidate 1', party: 'UDA', votes: 13400 },
+      { candidate: 'Candidate 1', party: 'UDA', votes: 560400 },
       { candidate: 'Candidate 2', party: 'ODM', votes: 54000 },
       { candidate: 'Candidate 3', party: 'INDEPENDENT', votes: 16450 },
       { candidate: 'Candidate 4', party: 'Party D', votes: 2340 },
@@ -85,7 +85,7 @@ export const ELECTIONS: County[] = [
   {
     name: 'Kisumu',
     president: [
-      { candidate: 'Candidate 1', party: 'UDA', votes: 13400 },
+      { candidate: 'Candidate 1', party: 'UDA', votes: 29000 },
       { candidate: 'Candidate 2', party: 'ODM', votes: 54000 },
       { candidate: 'Candidate 3', party: 'INDEPENDENT', votes: 16450 },
       { candidate: 'Candidate 4', party: 'Party D', votes: 2340 },
@@ -112,7 +112,7 @@ export const ELECTIONS: County[] = [
   {
     name: 'Kisii',
     president: [
-      { candidate: 'Candidate 1', party: 'UDA', votes: 13400 },
+      { candidate: 'Candidate 1', party: 'UDA', votes: 76433 },
       { candidate: 'Candidate 2', party: 'ODM', votes: 54000 },
       { candidate: 'Candidate 3', party: 'INDEPENDENT', votes: 16450 },
       { candidate: 'Candidate 4', party: 'Party D', votes: 2340 },
@@ -139,7 +139,7 @@ export const ELECTIONS: County[] = [
   {
     name: 'Kakamega',
     president: [
-      { candidate: 'Candidate 1', party: 'UDA', votes: 13400 },
+      { candidate: 'Candidate 1', party: 'UDA', votes: 84400 },
       { candidate: 'Candidate 2', party: 'ODM', votes: 54000 },
       { candidate: 'Candidate 3', party: 'INDEPENDENT', votes: 16450 },
       { candidate: 'Candidate 4', party: 'Party D', votes: 2340 },
@@ -166,7 +166,7 @@ export const ELECTIONS: County[] = [
   {
     name: 'Kajiado',
     president: [
-      { candidate: 'Candidate 1', party: 'UDA', votes: 13400 },
+      { candidate: 'Candidate 1', party: 'UDA', votes: 39100 },
       { candidate: 'Candidate 2', party: 'ODM', votes: 54000 },
       { candidate: 'Candidate 3', party: 'INDEPENDENT', votes: 16450 },
       { candidate: 'Candidate 4', party: 'Party D', votes: 2340 },
@@ -193,7 +193,7 @@ export const ELECTIONS: County[] = [
   {
     name: 'Nandi',
     president: [
-      { candidate: 'Candidate 1', party: 'UDA', votes: 13400 },
+      { candidate: 'Candidate 1', party: 'UDA', votes: 34400 },
       { candidate: 'Candidate 2', party: 'ODM', votes: 54000 },
       { candidate: 'Candidate 3', party: 'INDEPENDENT', votes: 16450 },
       { candidate: 'Candidate 4', party: 'Party D', votes: 2340 },
@@ -220,7 +220,7 @@ export const ELECTIONS: County[] = [
   {
     name: 'Wajir',
     president: [
-      { candidate: 'Candidate 1', party: 'UDA', votes: 13400 },
+      { candidate: 'Candidate 1', party: 'UDA', votes: 9600 },
       { candidate: 'Candidate 2', party: 'ODM', votes: 54000 },
       { candidate: 'Candidate 3', party: 'INDEPENDENT', votes: 16450 },
       { candidate: 'Candidate 4', party: 'Party D', votes: 2340 },
