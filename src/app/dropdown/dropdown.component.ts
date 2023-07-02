@@ -29,7 +29,21 @@ export class DropdownComponent implements OnInit {
 
   onCountySelection(countyName: string) {
     this.selectedCounty = this.counties.find(county => county.name === countyName);
+    if (this.selectedCounty) {
+      this.calculatePercentage(this.selectedCounty.president);
+      this.calculatePercentage(this.selectedCounty.governor);
+      this.calculatePercentage(this.selectedCounty.senate);
+      this.calculatePercentage(this.selectedCounty.womenRepresentative);
+    }
     this.countyControl.setValue(''); // Clear the input form
   }
 
+
+
+  calculatePercentage(candidates: { candidate: string; party: string; votes: number; percentage?: number }[]) {
+    const totalVotes = candidates.reduce((sum, candidate) => sum + candidate.votes, 0);
+    candidates.forEach(candidate => {
+      candidate.percentage = (candidate.votes / totalVotes) * 100;
+    });
+  }
 }
