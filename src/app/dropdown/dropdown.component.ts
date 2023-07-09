@@ -39,7 +39,6 @@ export class DropdownComponent implements OnInit {
   }
 
 
-
   calculatePercentage(candidates: { candidate: string; party: string; votes: number; percentage?: number }[]) {
     const totalVotes = candidates.reduce((sum, candidate) => sum + candidate.votes, 0);
     candidates.forEach(candidate => {

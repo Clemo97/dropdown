@@ -1,12 +1,39 @@
 .container {
-  display: flex;
-  flex-direction: column;
+  margin-top: 20px;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  /* Adjust this value as needed */
 }
 
+h3,
+h4,
+ul {
+  text-align: center;
+}
+
+.mat-table {
+  width: 100%;
+  overflow: auto;
+}
+
+.mat-header-row,
+.mat-row {
+  display: flex;
+}
+
+.mat-header-cell,
+.mat-cell {
+  flex: 1;
+  padding: 8px;
+}
+
+.progress-bar-container {
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar-value {
+  margin-right: 10px;
+  font-weight: bold;
+}
 h3,
 h4,
 ul {

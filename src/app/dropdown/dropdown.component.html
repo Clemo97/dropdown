@@ -47,6 +47,100 @@
       <tr mat-row *matRowDef="let result; columns: ['candidate', 'party', 'votes', 'percentage']"></tr>
     </table>
 
+    <!-- Governor Results -->
+    <h4><b>Governor</b></h4>
+    <table mat-table [dataSource]="selectedCounty.governor" class="mat-elevation-z8">
+      <ng-container matColumnDef="candidate">
+        <th mat-header-cell *matHeaderCellDef>Candidate</th>
+        <td mat-cell *matCellDef="let result">{{ result.candidate }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="party">
+        <th mat-header-cell *matHeaderCellDef>Party</th>
+        <td mat-cell *matCellDef="let result">{{ result.party }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="votes">
+        <th mat-header-cell *matHeaderCellDef>Votes</th>
+        <td mat-cell *matCellDef="let result">{{ result.votes }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="percentage">
+        <th mat-header-cell *matHeaderCellDef>Percentage</th>
+        <td mat-cell *matCellDef="let result">
+          <div class="progress-bar-container">
+            <div class="progress-bar-value">{{ result.percentage | number:'1.2-2' }}%</div>
+            <mat-progress-bar mode="determinate" [value]="result.percentage"></mat-progress-bar>
+          </div>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="['candidate', 'party', 'votes', 'percentage']"></tr>
+      <tr mat-row *matRowDef="let result; columns: ['candidate', 'party', 'votes', 'percentage']"></tr>
+    </table>
     <!-- Repeat the above table structure for other categories: Governor, Senate, Women Representative -->
+    <h4><b>Senate</b></h4>
+    <table mat-table [dataSource]="selectedCounty.senate" class="mat-elevation-z8">
+      <ng-container matColumnDef="candidate">
+        <th mat-header-cell *matHeaderCellDef>Candidate</th>
+        <td mat-cell *matCellDef="let result">{{ result.candidate }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="party">
+        <th mat-header-cell *matHeaderCellDef>Party</th>
+        <td mat-cell *matCellDef="let result">{{ result.party }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="votes">
+        <th mat-header-cell *matHeaderCellDef>Votes</th>
+        <td mat-cell *matCellDef="let result">{{ result.votes }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="percentage">
+        <th mat-header-cell *matHeaderCellDef>Percentage</th>
+        <td mat-cell *matCellDef="let result">
+          <div class="progress-bar-container">
+            <div class="progress-bar-value">{{ result.percentage | number:'1.2-2' }}%</div>
+            <mat-progress-bar mode="determinate" [value]="result.percentage"></mat-progress-bar>
+          </div>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="['candidate', 'party', 'votes', 'percentage']"></tr>
+      <tr mat-row *matRowDef="let result; columns: ['candidate', 'party', 'votes', 'percentage']"></tr>
+    </table>
+
+
+    <h4><b>Women Representative</b></h4>
+    <table mat-table [dataSource]="selectedCounty.womenRepresentative" class="mat-elevation-z8">
+      <ng-container matColumnDef="candidate">
+        <th mat-header-cell *matHeaderCellDef>Candidate</th>
+        <td mat-cell *matCellDef="let result">{{ result.candidate }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="party">
+        <th mat-header-cell *matHeaderCellDef>Party</th>
+        <td mat-cell *matCellDef="let result">{{ result.party }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="votes">
+        <th mat-header-cell *matHeaderCellDef>Votes</th>
+        <td mat-cell *matCellDef="let result">{{ result.votes }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="percentage">
+        <th mat-header-cell *matHeaderCellDef>Percentage</th>
+        <td mat-cell *matCellDef="let result">
+          <div class="progress-bar-container">
+            <div class="progress-bar-value">{{ result.percentage | number:'1.2-2' }}%</div>
+            <mat-progress-bar mode="determinate" [value]="result.percentage"></mat-progress-bar>
+          </div>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="['candidate', 'party', 'votes', 'percentage']"></tr>
+      <tr mat-row *matRowDef="let result; columns: ['candidate', 'party', 'votes', 'percentage']"></tr>
+    </table>
+
   </div>
 </div>
